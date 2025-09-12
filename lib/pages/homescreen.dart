@@ -755,37 +755,33 @@ class _HomeScreenState extends State<HomeScreen> {
                 // Google
                 _platformRateTile(
                   logo: 'assets/images/google_logo.png',
-                  name: 'Google',
                   rate: '₹88,000.23',
                   diff: '-₹3,000.21',
-                  logoWidth: 22,
+                  height: 32,
                 ),
                 const SizedBox(height: 8),
                 // Xoom
                 _platformRateTile(
                   logo: 'assets/images/xoom_logo.png',
-                  name: 'xoom',
                   rate: '₹88,000.23',
                   diff: '-₹3,000.21',
-                  logoWidth: 50,
+                  height: 42,
                 ),
                 const SizedBox(height: 8),
                 // Wise
                 _platformRateTile(
                   logo: 'assets/images/wise_logo.png',
-                  name: 'WISE',
                   rate: '₹88,000.23',
                   diff: '-₹3,000.21',
-                  logoWidth: 40,
+                  height: 32,
                 ),
                 const SizedBox(height: 8),
                 // Remitly
                 _platformRateTile(
                   logo: 'assets/images/remitly_logo.png',
-                  name: 'Remitly',
                   rate: '₹88,000.23',
                   diff: '-₹3,000.21',
-                  logoWidth: 50,
+                  height: 32,
                 ),
                 const SizedBox(height: 18),
                 // Updated At
@@ -831,12 +827,57 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+  //   Widget _platformRateTile({
+  //     required String logo,
+  //     required String name,
+  //     required String rate,
+  //     required String diff,
+  //     double logoWidth = 30,
+  //   }) {
+  //     return Container(
+  //       decoration: BoxDecoration(
+  //         color: Colors.white,
+  //         borderRadius: BorderRadius.circular(12),
+  //       ),
+  //       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+  //       child: Row(
+  //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  //         children: [
+  //           Image.asset(logo, width: logoWidth, height: 24, fit: BoxFit.contain),
+  //           const SizedBox(width: 12),
+
+  //           Column(
+  //             crossAxisAlignment: CrossAxisAlignment.end,
+  //             children: [
+  //               Text(
+  //                 rate,
+  //                 style: GoogleFonts.poppins(
+  //                   fontWeight: FontWeight.w600,
+  //                   fontSize: 15,
+  //                   color: const Color(0xFF2F2F34),
+  //                 ),
+  //               ),
+  //               Text(
+  //                 diff,
+  //                 style: GoogleFonts.poppins(
+  //                   fontWeight: FontWeight.w500,
+  //                   fontSize: 13,
+  //                   color: const Color(0xFFFF3B30),
+  //                 ),
+  //               ),
+  //             ],
+  //           ),
+  //         ],
+  //       ),
+  //     );
+
+  //   }
+  // }
   Widget _platformRateTile({
     required String logo,
-    required String name,
     required String rate,
     required String diff,
-    double logoWidth = 30,
+    required double height,
   }) {
     return Container(
       decoration: BoxDecoration(
@@ -845,39 +886,37 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Image.asset(logo, width: logoWidth, height: 24, fit: BoxFit.contain),
-          const SizedBox(width: 12),
-          Expanded(
-            child: Text(
-              name,
-              style: GoogleFonts.poppins(
-                fontWeight: FontWeight.w600,
-                fontSize: 15,
-                color: const Color(0xFF2F2F34),
-              ),
-            ),
+          Image.asset(
+            logo,
+            height: height,
+            // Match Figma
+            fit: BoxFit.contain,
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Text(
-                rate,
-                style: GoogleFonts.poppins(
-                  fontWeight: FontWeight.w600,
-                  fontSize: 15,
-                  color: const Color(0xFF2F2F34),
+          const SizedBox(width: 16), // Figma-like spacing
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Text(
+                  rate,
+                  style: GoogleFonts.poppins(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 15,
+                    color: const Color(0xFF2F2F34),
+                  ),
                 ),
-              ),
-              Text(
-                diff,
-                style: GoogleFonts.poppins(
-                  fontWeight: FontWeight.w500,
-                  fontSize: 13,
-                  color: const Color(0xFFFF3B30),
+                Text(
+                  diff,
+                  style: GoogleFonts.poppins(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 13,
+                    color: const Color(0xFFFF3B30),
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ],
       ),
