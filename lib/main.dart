@@ -3,7 +3,13 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:my_first_app/pages/homescreen.dart';
 // import 'package:my_first_app/pages/landingpage.dart';
 import 'package:my_first_app/pages/loginpage.dart';
+import 'package:my_first_app/pages/newuserregistration.dart';
 import 'package:my_first_app/pages/otpverification.dart';
+import 'package:my_first_app/pages/profilepage.dart';
+import 'package:my_first_app/pages/tosagreement.dart';
+import 'package:my_first_app/pages/verificationscreen2.dart';
+
+import 'pages/newbankaccountpage.dart';
 // import 'package:my_first_app/pages/newbankaccountpage.dart';
 // import 'package:my_first_app/pages/newuserregistration.dart';
 // import 'package:my_first_app/pages/verificationscreen.dart';
