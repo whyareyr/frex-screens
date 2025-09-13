@@ -9,7 +9,7 @@ class ProfilePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFFF7F8F9),
       appBar: AppBar(
-        backgroundColor: const Color(0xFFF7F8F9),
+        backgroundColor: const Color(0xFFFFFFFF),
         elevation: 0,
         title: Text(
           'Profile',
@@ -27,6 +27,8 @@ class ProfilePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // User Info Card
+            const SizedBox(height: 29),
+
             Card(
               color: Colors.white,
               elevation: 0,
@@ -125,21 +127,18 @@ class ProfilePage extends StatelessWidget {
         unselectedItemColor: Colors.grey[600],
         selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
         items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Account"),
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_balance),
-            label: 'Account',
+            icon: Icon(Icons.list_alt),
+            label: "Transactions",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.receipt_long),
-            label: 'Transactions',
+            icon: Icon(Icons.account_circle),
+            label: "Profile",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person_outline),
-            label: 'Profile',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.headset_mic_outlined),
-            label: 'Help',
+            icon: Icon(Icons.help_outline),
+            label: "Help",
           ),
         ],
       ),

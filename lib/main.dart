@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:my_first_app/pages/helppage.dart';
+// import 'package:my_first_app/pages/homescreen1.dart';
 import 'package:my_first_app/pages/homescreen.dart';
+
 // import 'package:my_first_app/pages/landingpage.dart';
 import 'package:my_first_app/pages/loginpage.dart';
 import 'package:my_first_app/pages/newuserregistration.dart';
@@ -10,6 +13,7 @@ import 'package:my_first_app/pages/tosagreement.dart';
 import 'package:my_first_app/pages/verificationscreen2.dart';
 
 import 'pages/newbankaccountpage.dart';
+import 'pages/transactionspage.dart';
 // import 'package:my_first_app/pages/newbankaccountpage.dart';
 // import 'package:my_first_app/pages/newuserregistration.dart';
 // import 'package:my_first_app/pages/verificationscreen.dart';
